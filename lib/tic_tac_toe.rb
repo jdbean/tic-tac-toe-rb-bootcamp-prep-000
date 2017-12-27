@@ -29,3 +29,13 @@ end
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " " || board[index == ""])
 end
+
+def valid_move?(board, index)
+  if index <= 8 && index >= 0
+    if position_taken?(board, index) == false
+      return true
+    end
+  else
+    return false
+  end
+end
