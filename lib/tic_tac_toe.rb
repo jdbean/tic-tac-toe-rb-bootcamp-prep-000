@@ -97,5 +97,7 @@ def play
   until full?(board)
     over?(board)
   end
+  if won?
+    puts "Congratulations #{won?(board)}!"
 end
 end
