@@ -95,8 +95,8 @@ end
 def play
   board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   allow($stdout).to receive(:puts)
-  until full?(board)
-    over?(board)
+  until over?(board)
+    turn (board)
   end
   if won?
     puts "Congratulations #{won?(board)}!"
